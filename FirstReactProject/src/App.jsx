@@ -1,7 +1,9 @@
 
 let App=()=>{
   return(
-    <h1 style={{ textAlign: "center", marginTop: "50px", fontFamily: "Arial" }}>Hello World, <br />This is my first React project!</h1>
+    <div style={{ textAlign: "center", marginTop: "50px", fontFamily: "Arial" }}>
+    <h1 >Hello World, <br />This is my first React project!</h1>
+    </div>
   )
 }
 
