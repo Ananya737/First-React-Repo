@@ -1,8 +1,11 @@
 
+
+
 // const name="Ananya";
 // const age=22;
 // const lpa=7;
 
+//Inserting a Large Block of HTML code:
 const table1=<table border={2} cellPadding={10} cellSpacing={5}>
   <thead>
     <tr>
@@ -45,7 +48,11 @@ const table1=<table border={2} cellPadding={10} cellSpacing={5}>
 let App=()=>{
   return(
 
+    // Expression in JSX:
     <h3>{table1}</h3>
+
+
+    //Wrapping html tags in one element: One Top Level Element!
 
 //     <div>
 //  <h1>Hello</h1>
@@ -55,7 +62,7 @@ let App=()=>{
 //  </div>
 
 
-// Fragment tag 
+// Fragment tag:
  
 //     <>
 //  <h1>Hello</h1>
