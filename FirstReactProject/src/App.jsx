@@ -3,7 +3,7 @@
 // const age=22;
 // const lpa=7;
 
-const table1=<table border={2}>
+const table1=<table border={2} cellPadding={10} cellSpacing={5}>
   <thead>
     <tr>
       <td>Sr. No.</td>
@@ -22,6 +22,21 @@ const table1=<table border={2}>
       <td>02</td>
       <td>Preety Shenoy</td>
       <td>Life is what you make it</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td>R.K. Narayan</td>
+      <td>Malgudi Days</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>Colleen Hoover</td>
+      <td>It Ends With Us</td>
+    </tr>
+    <tr>
+      <td>05</td>
+      <td>Haruki Murakami</td>
+      <td>Men Without Women</td>
     </tr>
   </tbody>
 </table>
