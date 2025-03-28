@@ -9,10 +9,10 @@
 const table1=<table border={2} cellPadding={10} cellSpacing={5}>
   <thead>
     <tr>
-      <td>Sr. No.</td>
+      <td>Sr. No.</td>   
       <td>Author</td>
       <td>Book</td>
-    </tr>
+    </tr> 
     
   </thead>
   <tbody>
