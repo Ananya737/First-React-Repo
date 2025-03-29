@@ -1,18 +1,19 @@
-import Header from "./Header";
-import Data from "./Data";
-import Footer from "./Footer";
 
 
 
+
+import Stu from "./Stu";
+
+const name="Garima";
+const city="Bhopal";
+const age=22;
 
 
 const App=()=>{
   return(
     <>
-    <Header/>
-    <Data/>
-    <Footer/>
-
+  
+ <Stu name={name} city={city} age={age}/>
 
 
 
