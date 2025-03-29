@@ -1,20 +1,27 @@
+import Cybrom from "./Cybrom";
+
+
+const College={
+  name:"DHSGSU",
+  sub:"Yoga",
+  city:"Sagar"
+
+}
 
 
 
-
-import Stu from "./Stu";
-
-const name="Garima";
-const city="Bhopal";
-const age=22;
 
 
 const App=()=>{
   return(
     <>
   
- <Stu name={name} city={city} age={age}/>
 
+<Cybrom 
+name={College.name}
+sub={College.sub}
+city={College.city}
+/>
 
 
 
