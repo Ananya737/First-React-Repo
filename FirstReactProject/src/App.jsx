@@ -19,7 +19,7 @@ const App=()=>{
 
 <Cybrom 
 name={College.name}
-sub={College.sub}
+sub={College.subject}
 city={College.city}
 />
 
