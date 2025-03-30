@@ -3,7 +3,7 @@ import Cybrom from "./Cybrom";
 
 const College={
   name:"DHSGSU",
-  sub:"Yoga",
+  sub:"Yogic Science",
   city:"Sagar"
 
 }
@@ -19,7 +19,7 @@ const App=()=>{
 
 <Cybrom 
 name={College.name}
-sub={College.subject}
+subject={College.sub}
 city={College.city}
 />
 
