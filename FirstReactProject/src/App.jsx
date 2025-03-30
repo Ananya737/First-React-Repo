@@ -5,7 +5,6 @@ const College={
   name:"DHSGSU",
   sub:"Yogic Science",
   city:"Sagar"
-
 }
 
 
