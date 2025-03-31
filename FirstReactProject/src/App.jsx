@@ -54,7 +54,7 @@ const App=()=>{
   return(
     <>
    
-   <table border="1" cellSpacing="4" cellPadding="5">
+   <table border="1" cellSpacing="4" cellPadding="15" textalign="center" width={500}>
     <tr>
       <th>Name</th>
       <th>City</th>
