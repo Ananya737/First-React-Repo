@@ -8,7 +8,7 @@ const College={
 }
 
 
-
+//Parent component:
 
 
 const App=()=>{

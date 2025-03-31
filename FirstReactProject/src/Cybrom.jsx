@@ -1,4 +1,6 @@
 
+//Child component:
+
 const Cybrom=(props)=>{
     return(
         <>
