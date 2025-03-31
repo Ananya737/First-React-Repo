@@ -1,29 +1,23 @@
-import Cybrom from "./Cybrom";
 
 
-const College={
-  name:"DHSGSU",
-  sub:"Yogic Science",
-  city:"Sagar"
+//Map:
+
+const Student=["Ananya","Garima","Aastha"];
+let ans=Student.map((key)=>{
+  return(
+    <>
+    <h1>{key}</h1>
+    </>
+  )
 }
 
-
-//Parent component:
-
+)
 
 const App=()=>{
   return(
     <>
-  
 
-<Cybrom 
-name={College.name}
-subject={College.sub}
-city={College.city}
-/>
-
-
-
+  {ans};
 
     </>
   )
