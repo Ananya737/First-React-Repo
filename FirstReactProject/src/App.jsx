@@ -2,11 +2,48 @@
 
 //Map:
 
-const Student=["Ananya","Garima","Aastha"];
-let ans=Student.map((key)=>{
+const Array=[
+  {
+    "name":"Ananya",
+    "city":"Sagar",
+    "sub":"Java",
+    "age":22
+  },
+  {
+    "name":"Ananya",
+    "city":"Sagar",
+    "sub":"Java",
+    "age":22
+  },
+  {
+    "name":"Ananya",
+    "city":"Sagar",
+    "sub":"Java",
+    "age":22
+  },
+  {
+    "name":"Ananya",
+    "city":"Sagar",
+    "sub":"Java",
+    "age":22
+  },
+  {
+    "name":"Ananya",
+    "city":"Sagar",
+    "sub":"Java",
+    "age":22
+  }
+
+]
+
+const ans=Array.map((key)=>{
   return(
     <>
-    <h1>{key}</h1>
+    <tr><td>{key.name}</td>
+    <td>{key.city}</td>
+    <td>{key.sub}</td>
+    <td>{key.age}</td>
+    </tr>
     </>
   )
 }
@@ -16,8 +53,21 @@ let ans=Student.map((key)=>{
 const App=()=>{
   return(
     <>
+   
+   <table border="1" cellSpacing="4" cellPadding="5">
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+      <th>Subject</th>
+      <th>Age</th>
+    </tr>
+    {ans}
+  
+   </table>
+   
+    
 
-  {ans};
+  
 
     </>
   )
