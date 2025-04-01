@@ -1,39 +1,31 @@
-import Empdata from "./Empdata";
-import Empdesign from "./Empdesign";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import Home from "./Home";
+import About from "./About";
+import Contact from "./Contact";
+import Services from "./Services";
 
-//Map:
 const App=()=>{
-
-  const ans=Empdata.map((key)=>{
-    return(
-      <>
-       <Empdesign
-       name={key.name}
-       age={key.age}
-       sub={key.sub}
-  
-  />
-
-      </>
-    )
-  }
-
-  )
-
-
-
 return(
   <>
-<table border={1} cellPadding={10} cellSpacing={5}>
-  <tr>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Sub</th>
-  </tr>
- {ans}
-</table>
+<BrowserRouter>
+<Routes>
+  <Route path="/" element={<Layout/>}>
+  <Route path="home" element={<Home/>}/>
+  <Route path="about" element={<About/>}/>
+  <Route path="contact" element={<Contact/>}/>
+  <Route path="services" element={<Services/>}/>
+  
+
+  </Route>
+</Routes>
+</BrowserRouter>
+
+
+
   </>
 )
+ 
 }
 export default App;
 
