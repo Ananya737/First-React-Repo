@@ -1,23 +1,24 @@
-import One from "./One"
-import Two from "./Two"
+import img1 from "./images/img1.jpg";
+import img2 from "./images/img2.jpg";
+import img3 from "./images/img3.jpg";
 
-
-const dec1={
-  border:"2px solid red", borderRadius:"50px", width:"400px", height:"400px", display:"flex",justifyContent:"center", alignItems:"center", fontSize:"30px", marginLeft:"500px",marginTop:"100px",backgroundColor:"yellowgreen",color:"white"
-}
-
-const dec2={
-  width:"300px",height:"300px",border:"2px solid blue",borderRadius:"20px",backgroundColor:"aqua"
-
-}
 
 
 const App=()=>{
 return(
   <>
 
-<One />
-<Two />
+<div style={{display:"flex",flexDirection:"column", gap:"50px"}}>
+
+<img src={img1} width={400} />
+<img src={img2}  width={400}/>
+<img src={img3}  width={400}/>
+
+
+</div>
+     
+
+
 
 
   
