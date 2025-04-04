@@ -160,11 +160,13 @@
 // alert(`My name is ${nm}`);
 // }
 
-const display=(e)=>{
-  alert("Type: "+e.type + "   " + "Name: "+ e.target.name +"   "+ "Value: " + e.target.value)
+// const display=(e)=>{
+//   alert("Type: "+e.type + "   " + "Name: "+ e.target.name +"   "+ "Value: " + e.target.value)
+// }
+
+const display=(nm,e)=>{
+  alert("Name: "+ nm +"   "+ "Name: "+ e.target.name + "   "+ "Type: " + e.type+ "   " + "Value: " + e.target.value )
 }
-
-
 
 const App=()=>{
 return(
@@ -172,7 +174,7 @@ return(
 
 <h1>Hello World!</h1>
 
-<button name="btn1" value="mybtn" onClick={display}>Click here</button>
+<button name="btn1" value="mybtn" onClick={(e)=>{display("Ananya",e)}}>Click here</button>
 
 
 
