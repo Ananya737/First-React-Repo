@@ -156,11 +156,13 @@
 // }
 
 
-const name=(nm)=>{
-alert(`My name is ${nm}`);
+// const name=(nm)=>{
+// alert(`My name is ${nm}`);
+// }
+
+const display=(e)=>{
+  alert("Type: "+e.type + "   " + "Name: "+ e.target.name +"   "+ "Value: " + e.target.value)
 }
-
-
 
 
 
@@ -170,7 +172,7 @@ return(
 
 <h1>Hello World!</h1>
 
-<button onClick={()=>{name("Ananya")}}>Click here</button>
+<button name="btn1" value="mybtn" onClick={display}>Click here</button>
 
 
 
