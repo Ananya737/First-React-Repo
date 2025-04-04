@@ -137,22 +137,7 @@
 // </div>
       
 
-
-
 // <Footer/>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //   </>
@@ -166,8 +151,13 @@
 
 
 
-const display=()=>{
-  alert("Events in React JSX")
+// const display=()=>{
+//   alert("Events in React JSX")
+// }
+
+
+const name=(nm)=>{
+alert(`My name is ${nm}`);
 }
 
 
@@ -180,7 +170,7 @@ return(
 
 <h1>Hello World!</h1>
 
-<button onClick={display}>Click here</button>
+<button onClick={()=>{name("Ananya")}}>Click here</button>
 
 
 
