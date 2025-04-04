@@ -1,17 +1,32 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+
+
+
+
+import Carousel from 'react-bootstrap/Carousel';
+import tcs1 from './images/tcs1.jpg';
+import tcs2 from './images/tcs2.jpg';
+import tcs3 from './images/tcs3.jpg';
+
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-import Carousel from 'react-bootstrap/Carousel';
+import tcs4 from './images/tcs4.jpg';
+import tcs5 from './images/tcs5.jpg';
+import tcs6 from './images/tcs6.jpg';
 
-import img1 from "./images/img1.jpg";
-import img2 from "./images/img2.jpg";
-import img3 from "./images/img3.jpg";
-import img4 from "./images/img4.jpg";
+
+
+
+import Footer from './footer';
+
+
+
+
+
 
 
 
@@ -21,56 +36,73 @@ return(
 
 
 
-
-<h1>Welcome</h1>
-
-<Navbar bg="dark" data-bs-theme="dark">
+<Navbar bg="black" data-bs-theme="dark" className='navbar' >
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#home" className='logo'>TCS <span className='fullForm'><span>Tata</span> <span>Consultancy</span> <span>Services</span></span></Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#home" className='navLink'>What We Do</Nav.Link>
+            <Nav.Link href="#features" className='navLink'>Features</Nav.Link>
+            <Nav.Link href="#pricing" className='navLink'>Pricing</Nav.Link>
+            <Nav.Link href="#pricing" className='navLink'>Blog</Nav.Link>
+            <Nav.Link href="#pricing" className='navLink'>Gallery</Nav.Link>
+            <Nav.Link href="#pricing" className='navLink'>FAQs</Nav.Link>
+            <Nav.Link href="#pricing" className='navLink'>Contact us</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
 
 
-      <Carousel>
+
+
+
+
+
+
+
+
+       <Carousel >
       <Carousel.Item>
-        <img src={img1} alt="" width="100%" height="300"/>
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <img src={tcs1}  width="80%" height="600px" className='bannerImgs'/>
+        <Carousel.Caption className='banner' >
+          <h3 className='bannerHeading1'>TCS Digital Twindex Report: <br /> Manufacturing</h3>
+          <p className='bannerData1'>Future -Ready manufacturing: Powering the Factories of the Future!</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-      <img src={img2} alt="" />
+      <img src={tcs2}  width="80%" height="600px" className='bannerImgs' />
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img src={img3} alt="" />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+        <Carousel.Caption className='banner'  >
+          <h3 className='bannerHeading2'>TCS gets the Rising Star Award <br /> at GTC 2025</h3>
+          <p className='bannerData2'>
+         Honoring TCS’ rapid progress in AI innovation.
           </p>
         </Carousel.Caption>
       </Carousel.Item>
-    </Carousel>
+      <Carousel.Item>
+      <img src={tcs3}  width="80%" height="600px" className='bannerImgs'/>
 
-      <div style={{display:"flex", justifyContent:"center", gap:"50px",height:"200px"}}>
+        <Carousel.Caption  className='banner' >
+          <h3 className='bannerHeading3'>TCS Partners with Air New Zealand <br /> to Drive  AI-Led Transformation, <br /> Enhance Passenger Experience</h3>
+          <p className='bannerData3'>
+          TCS is set to modernize Air New Zealand's digital infrastructure.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel> 
 
 
-      <Card style={{ width: '18rem' }}>
-   <img src={img1} alt="" />
+
+<h1 className='sec2h'>Transforming Businesses</h1>
+
+
+
+
+<div className='cards'>
+
+<Card style={{ width: '25rem' }} className='card1'>
+      <img src={tcs4}  />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>MLC Life Insurance Aligns Growth with Digital Transformation.</Card.Title>
         <Card.Text>
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
@@ -79,11 +111,10 @@ return(
       </Card.Body>
     </Card>
 
-
-    <Card style={{ width: '18rem' }}>
-   <img src={img2} alt="" />
+    <Card style={{ width: '25rem' }} className='card1'>
+      <img src={tcs5}  />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Air France-KLM and TCS: Celebrating 30 Years of Successful Partnership.</Card.Title>
         <Card.Text>
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
@@ -92,10 +123,10 @@ return(
       </Card.Body>
     </Card>
 
-    <Card style={{ width: '18rem' }}>
-   <img src={img3} alt="" />
+    <Card style={{ width: '25rem' }} className='card1'>
+      <img src={tcs6}  />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Wm Morrisons Supermarkets Ltd. Transforms Ops with Real-time Insights.</Card.Title>
         <Card.Text>
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
@@ -103,20 +134,24 @@ return(
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
-
-    <Card style={{ width: '18rem' }}>
-   <img src={img4} alt="" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
 </div>
+      
+
+
+
+<Footer/>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
