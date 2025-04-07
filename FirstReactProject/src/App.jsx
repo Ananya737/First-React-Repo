@@ -193,25 +193,65 @@
 import { useState } from "react";
 
 
-const App=()=>{
-const [name,setName]= useState("Ananya");
-return(
-  <>
+// const App=()=>{
+// const [color,setColor]= useState("grey");
+// return(
+//   <>
 
-<h1>Hello World!  : {name} here</h1>
+// <h1 style={{color:color}}>color : {color}</h1>
 
-<button onClick={()=>{setName("Garima")}}>Click here</button>
+// <button onClick={()=>{setColor("pink")}}>pink</button>
+// <button onClick={()=>{setColor("blue")}}>blue</button>
+// <button onClick={()=>{setColor("yellow")}}>yellow</button>
 
 
 
 
 
-  </>
+//   </>
 
-)
+// )
  
+// }
+// export default App;
+
+import Button from 'react-bootstrap/Button';
+
+
+
+
+const App=()=>{
+    const [cnt,setCnt]=useState(0);
+
+    const mydec=()=>{
+if(cnt<1){
+    alert("Not");
 }
-export default App;
+else{
+    setCnt(cnt-1);
+}
+    }
+    return(
+      <>
+    <div style={{width:"500px", height:"200px", border:"3px solid black", borderRadius:"50px",textAlign:"center", color:"black", paddingTop:"30px", position:"absolute",left:"30%" ,top:"30%",backgroundColor:" grey"
+    }}>
+
+    <h1>Counter app: {cnt}</h1>
+    <Button variant="primary" onClick={()=>{setCnt(cnt+1)}} style={{marginLeft:"20px",border:"1px solid black",marginTop:"10px",fontWeight:"700"}}>Increment</Button>
+    <Button variant="primary" onClick={mydec} style={{marginLeft:"20px",border:"1px solid black",marginTop:"10px",fontWeight:"700"}}>Decrement</Button>
+    <Button variant="danger" onClick={()=>{setCnt(0)}} style={{marginLeft:"20px",border:"1px solid black",marginTop:"10px",fontWeight:"700"}}>Reset</Button>
+    </div>
+   
+
+
+    
+    
+      </>
+    
+    )
+     
+    }
+    export default App;
 
 
 
