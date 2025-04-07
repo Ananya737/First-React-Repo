@@ -164,17 +164,44 @@
 //   alert("Type: "+e.type + "   " + "Name: "+ e.target.name +"   "+ "Value: " + e.target.value)
 // }
 
-const display=(nm,e)=>{
-  alert("Name: "+ nm +"   "+ "Name: "+ e.target.name + "   "+ "Type: " + e.type+ "   " + "Value: " + e.target.value )
-}
+// const display=(nm,e)=>{
+//   alert("Name: "+ nm +"   "+ "Name: "+ e.target.name + "   "+ "Type: " + e.type+ "   " + "Value: " + e.target.value )
+// }
+
+// const App=()=>{
+// return(
+//   <>
+
+// <h1>Hello World!</h1>
+
+// <button name="btn1" value="mybtn" onClick={(e)=>{display("Ananya",e)}}>Click here</button>
+
+
+
+
+//   </>
+
+// )
+ 
+// }
+// export default App;
+
+
+
+
+//---------------------------------------------------------Form:----------------------------------------------------------------------
+import { useState } from "react";
+
 
 const App=()=>{
+const [name,setName]= useState("Ananya");
 return(
   <>
 
-<h1>Hello World!</h1>
+<h1>Hello World!  : {name} here</h1>
 
-<button name="btn1" value="mybtn" onClick={(e)=>{display("Ananya",e)}}>Click here</button>
+<button onClick={()=>{setName("Garima")}}>Click here</button>
+
 
 
 
@@ -185,3 +212,17 @@ return(
  
 }
 export default App;
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
