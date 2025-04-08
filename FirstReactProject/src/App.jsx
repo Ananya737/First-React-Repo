@@ -266,7 +266,11 @@
 
 
 
-// Use Effect hook:
+// Use Effect hook: 
+// this is of 3 types: 
+// 1) Renders on every render.
+// 2) Renders on first render.
+// 3) Renders when dependency changes.
 
 
 
@@ -286,7 +290,7 @@ const App=()=>{
   <h1>Count: {cnt}</h1>
   <h1>Multiplication: {multi}</h1>
 
-  <button onClick={()=>{setCnt(cnt+1)}}>Click</button>
+  <button onClick={()=>{setCnt(cnt+1)}}>Click here!</button>
 
     </>
   
