@@ -275,14 +275,18 @@ import { useState,useEffect } from "react";
 const App=()=>{
 
   const [cnt,setCnt]=useState(0);
+  const [multi,setMulti]=useState(0);
   useEffect(()=>{
-    setTimeout(()=>{
-      setCnt(cnt+1)
-    },5000)
-  },[])
+    
+      setMulti(cnt*2)
+    
+  },[cnt])
   return(
     <>
   <h1>Count: {cnt}</h1>
+  <h1>Multiplication: {multi}</h1>
+
+  <button onClick={()=>{setCnt(cnt+1)}}>Click</button>
 
     </>
   
@@ -291,6 +295,10 @@ const App=()=>{
 
 export default App;
 
+
+
+
+ 
 
 
 
