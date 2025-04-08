@@ -266,7 +266,7 @@
 
 
 
-// Use Effect hook
+// Use Effect hook:
 
 
 
@@ -278,8 +278,8 @@ const App=()=>{
   useEffect(()=>{
     setTimeout(()=>{
       setCnt(cnt+1)
-    },1000)
-  })
+    },5000)
+  },[])
   return(
     <>
   <h1>Count: {cnt}</h1>
@@ -288,10 +288,8 @@ const App=()=>{
   
   )
     }
-   
-     
-    
-    export default App;
+
+export default App;
 
 
 
