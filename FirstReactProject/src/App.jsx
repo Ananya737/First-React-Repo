@@ -190,7 +190,7 @@
 
 
 //---------------------------------------------------------Form:----------------------------------------------------------------------
-import { useState } from "react";
+// import { useState } from "react";
 
 
 // const App=()=>{
@@ -215,57 +215,82 @@ import { useState } from "react";
 // }
 // export default App;
 
-import Button from 'react-bootstrap/Button';
 
 
 
+// import Button from 'react-bootstrap/Button';
+
+// const App=()=>{
+//     const [cnt,setCnt]=useState(0);
+
+//     const mydec=()=>{
+// if(cnt<1){
+//     alert("Cannot decrease below 0!");
+// }
+// else{
+//     setCnt(cnt-1);
+// }
+//     }
+//     return(
+//       <>
+//       <body style={{backgroundColor:"grey"}}>
+//       <div style={{width:"550px",
+//     height:"250px",
+//     border:"1px solid black", 
+//     borderRadius:"25px",
+//     textAlign:"center", 
+//     color:"black", 
+//     paddingTop:"30px", 
+//     position:"absolute",
+//     left:"30%" ,
+//     top:"30%",
+//     backgroundColor:"bisque",
+//     boxShadow:"25px 25px 3px 2px black"
+//     }}>
+
+//     <h1 style={{textDecoration:"underline",fontStyle:"bold",fontWeight:"700"}}>Counter App!</h1>
+//     <h1 style={{color:"brown"}}>Count: {cnt}</h1>
+//     <Button variant="primary" onClick={()=>{setCnt(cnt+1)}} style={{marginLeft:"20px",border:"1px solid black",marginTop:"20px",fontWeight:"700"}}>Increment</Button>
+//     <Button variant="primary" onClick={mydec} style={{marginLeft:"20px",border:"1px solid black",marginTop:"20px",fontWeight:"700"}}>Decrement</Button>
+//     <Button variant="danger" onClick={()=>{setCnt(0)}} style={{marginLeft:"20px",border:"1px solid black",marginTop:"20px",fontWeight:"700"}}>Reset</Button>
+//     </div>
+//       </body>
+
+//       </>
+    
+//     )
+     
+//     }
+//     export default App;
+
+
+
+
+// Use Effect hook
+
+
+
+import { useState,useEffect } from "react";
 
 const App=()=>{
-    const [cnt,setCnt]=useState(0);
 
-    const mydec=()=>{
-if(cnt<1){
-    alert("Cannot decrease below 0!");
-}
-else{
-    setCnt(cnt-1);
-}
-    }
-    return(
-      <>
-      <body style={{backgroundColor:"grey"}}>
-      <div style={{width:"550px",
-    height:"250px",
-    border:"1px solid black", 
-    borderRadius:"25px",
-    textAlign:"center", 
-    color:"black", 
-    paddingTop:"30px", 
-    position:"absolute",
-    left:"30%" ,
-    top:"30%",
-    backgroundColor:"bisque",
-    boxShadow:"25px 25px 3px 2px black"
-    }}>
+  const [cnt,setCnt]=useState(0);
+  useEffect(()=>{
+    setTimeout(()=>{
+      setCnt(cnt+1)
+    },1000)
+  })
+  return(
+    <>
+  <h1>Count: {cnt}</h1>
 
-    <h1 style={{textDecoration:"underline",fontStyle:"bold",fontWeight:"700"}}>Counter App!</h1>
-    <h1 style={{color:"brown"}}>Count: {cnt}</h1>
-    <Button variant="primary" onClick={()=>{setCnt(cnt+1)}} style={{marginLeft:"20px",border:"1px solid black",marginTop:"20px",fontWeight:"700"}}>Increment</Button>
-    <Button variant="primary" onClick={mydec} style={{marginLeft:"20px",border:"1px solid black",marginTop:"20px",fontWeight:"700"}}>Decrement</Button>
-    <Button variant="danger" onClick={()=>{setCnt(0)}} style={{marginLeft:"20px",border:"1px solid black",marginTop:"20px",fontWeight:"700"}}>Reset</Button>
-    </div>
-      </body>
+    </>
   
-   
-
-
-    
-    
-      </>
-    
-    )
-     
+  )
     }
+   
+     
+    
     export default App;
 
 
