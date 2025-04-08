@@ -225,7 +225,7 @@ const App=()=>{
 
     const mydec=()=>{
 if(cnt<1){
-    alert("Not");
+    alert("Cannot decrease below 0!");
 }
 else{
     setCnt(cnt-1);
@@ -233,14 +233,29 @@ else{
     }
     return(
       <>
-    <div style={{width:"500px", height:"200px", border:"3px solid black", borderRadius:"50px",textAlign:"center", color:"black", paddingTop:"30px", position:"absolute",left:"30%" ,top:"30%",backgroundColor:" grey"
+      <body style={{backgroundColor:"grey"}}>
+      <div style={{width:"550px",
+    height:"250px",
+    border:"1px solid black", 
+    borderRadius:"25px",
+    textAlign:"center", 
+    color:"black", 
+    paddingTop:"30px", 
+    position:"absolute",
+    left:"30%" ,
+    top:"30%",
+    backgroundColor:"bisque",
+    boxShadow:"25px 25px 3px 2px black"
     }}>
 
-    <h1>Counter app: {cnt}</h1>
-    <Button variant="primary" onClick={()=>{setCnt(cnt+1)}} style={{marginLeft:"20px",border:"1px solid black",marginTop:"10px",fontWeight:"700"}}>Increment</Button>
-    <Button variant="primary" onClick={mydec} style={{marginLeft:"20px",border:"1px solid black",marginTop:"10px",fontWeight:"700"}}>Decrement</Button>
-    <Button variant="danger" onClick={()=>{setCnt(0)}} style={{marginLeft:"20px",border:"1px solid black",marginTop:"10px",fontWeight:"700"}}>Reset</Button>
+    <h1 style={{textDecoration:"underline",fontStyle:"bold",fontWeight:"700"}}>Counter App!</h1>
+    <h1 style={{color:"brown"}}>Count: {cnt}</h1>
+    <Button variant="primary" onClick={()=>{setCnt(cnt+1)}} style={{marginLeft:"20px",border:"1px solid black",marginTop:"20px",fontWeight:"700"}}>Increment</Button>
+    <Button variant="primary" onClick={mydec} style={{marginLeft:"20px",border:"1px solid black",marginTop:"20px",fontWeight:"700"}}>Decrement</Button>
+    <Button variant="danger" onClick={()=>{setCnt(0)}} style={{marginLeft:"20px",border:"1px solid black",marginTop:"20px",fontWeight:"700"}}>Reset</Button>
     </div>
+      </body>
+  
    
 
 
