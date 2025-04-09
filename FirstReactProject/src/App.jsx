@@ -274,27 +274,71 @@
 
 
 
+// import { useState,useEffect } from "react";
+
+// const App=()=>{
+
+//   const [cnt,setCnt]=useState(0);
+//   const [multi,setMulti]=useState(0);
+//   useEffect(()=>{
+    
+//       setMulti(cnt*2)
+    
+//   },[cnt])
+//   return(
+//     <>
+//   <h1>Count: {cnt}</h1>
+//   <h1>Multiplication: {multi}</h1>
+
+//   <button onClick={()=>{setCnt(cnt+1)}}>Click here!</button>
+
+//     </>
+  
+//   )
+//     }
+
+// export default App;
+
+
+
+
+//-----------------------------------------------------------------Form handling---------------------------------------------------------------------------------------
+
+
+
 import { useState,useEffect } from "react";
 
 const App=()=>{
+    const [name,setName]=useState("");
+    const [city,setCity]=useState("");
+    const [number,setNumber]=useState();
+    const [age,setAge]=useState();
+return(
+<>
+<h1 style={{display:"flex",justifyContent:"center",marginTop:"40px"}}>Learning Form Handling!</h1>
 
-  const [cnt,setCnt]=useState(0);
-  const [multi,setMulti]=useState(0);
-  useEffect(()=>{
-    
-      setMulti(cnt*2)
-    
-  },[cnt])
-  return(
-    <>
-  <h1>Count: {cnt}</h1>
-  <h1>Multiplication: {multi}</h1>
+<form style={{display:"flex",
+    flexDirection:"column",
+    width:"300px", 
+    border:"2px solid black", 
+    padding:"20px",
+    borderRadius:"10px",
+    position:"absolute",
+    left:"600px",
+    top:"150px",
+    backgroundColor:"lightBlue"
+    }}>
 
-  <button onClick={()=>{setCnt(cnt+1)}}>Click here!</button>
+    Enter Name: <input type="text" style={{border:"1px solid black",borderRadius:"5px"}} onChange={(e)=>{setName(e.target.value)}} value={name}/> <br />
+    Enter City: <input type="text" style={{border:"1px solid black",borderRadius:"5px"}} onChange={(e)=>{setCity(e.target.value)}} value={city}/> <br />
+    Enter number: <input type="number" style={{border:"1px solid black",borderRadius:"5px"}} onChange={(e)=>{setCity(e.target.value)}} value={number}/> <br />
+    Enter Age: <input type="number" style={{border:"1px solid black",borderRadius:"5px"}} onChange={(e)=>{setCity(e.target.value)}} value={age}/> <br />
+    <input type="submit" style={{backgroundColor:"black", color:"white",borderRadius:"5px"}} />
 
-    </>
-  
-  )
+</form>
+
+</>
+)
     }
 
 export default App;
