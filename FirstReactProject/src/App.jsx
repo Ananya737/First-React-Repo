@@ -306,52 +306,117 @@
 
 
 
-import { useState,useEffect } from "react";
+// import { useState,useEffect } from "react";
+
+// const App=()=>{
+//     const [name,setName]=useState("");
+//     const [city,setCity]=useState("");
+//     const [number,setNumber]=useState();
+//     const [age,setAge]=useState();
+    
+// return(
+// <>
+// <h1 style={{display:"flex",justifyContent:"center",marginTop:"40px"}}>Learning Form Handling!</h1>
+
+// <form style={{display:"flex",
+//     flexDirection:"column",
+//     width:"300px", 
+//     border:"2px solid black", 
+//     padding:"20px",
+//     borderRadius:"10px",
+//     position:"absolute",
+//     left:"600px",
+//     top:"150px",
+//     backgroundColor:"lightBlue"
+//     }}>
+
+//     Enter Name: <input type="text" style={{border:"1px solid black",borderRadius:"5px"}} onChange={(e)=>{setName(e.target.value)}} value={name}/> <br />
+//     Enter City: <input type="text" style={{border:"1px solid black",borderRadius:"5px"}} onChange={(e)=>{setCity(e.target.value)}} value={city}/> <br />
+//     Enter number: <input type="number" style={{border:"1px solid black",borderRadius:"5px"}} onChange={(e)=>{setCity(e.target.value)}} value={number}/> <br />
+//     Enter Age: <input type="number" style={{border:"1px solid black",borderRadius:"5px"}} onChange={(e)=>{setCity(e.target.value)}} value={age}/> <br />
+//     <input type="submit" style={{backgroundColor:"black", color:"white",borderRadius:"5px"}} />
+    
+
+// </form>
+
+
+// </>
+// )
+//     }
+
+// export default App;
+
+
+
+
+
+//------------------------------------------------------handling multiple inputs in one function-------------------------------------------------------
+
+
+
+import {useState } from "react";
+import axios from "axios";
 
 const App=()=>{
-    const [name,setName]=useState("");
-    const [city,setCity]=useState("");
-    const [number,setNumber]=useState();
-    const [age,setAge]=useState();
-return(
-<>
-<h1 style={{display:"flex",justifyContent:"center",marginTop:"40px"}}>Learning Form Handling!</h1>
+    const [input,setInput]=useState({});
+    const handleInput=(e)=>{
+let name=e.target.name;
+let value=e.target.value;
+setInput(values=>({...values,[name]:value}))
+console.log(input)
 
-<form style={{display:"flex",
-    flexDirection:"column",
-    width:"300px", 
-    border:"2px solid black", 
-    padding:"20px",
-    borderRadius:"10px",
-    position:"absolute",
-    left:"600px",
-    top:"150px",
-    backgroundColor:"lightBlue"
-    }}>
-
-    Enter Name: <input type="text" style={{border:"1px solid black",borderRadius:"5px"}} onChange={(e)=>{setName(e.target.value)}} value={name}/> <br />
-    Enter City: <input type="text" style={{border:"1px solid black",borderRadius:"5px"}} onChange={(e)=>{setCity(e.target.value)}} value={city}/> <br />
-    Enter number: <input type="number" style={{border:"1px solid black",borderRadius:"5px"}} onChange={(e)=>{setCity(e.target.value)}} value={number}/> <br />
-    Enter Age: <input type="number" style={{border:"1px solid black",borderRadius:"5px"}} onChange={(e)=>{setCity(e.target.value)}} value={age}/> <br />
-    <input type="submit" style={{backgroundColor:"black", color:"white",borderRadius:"5px"}} />
-
-</form>
-
-</>
-)
     }
 
-export default App;
+    const handleSubmit=async()=>{
+        let api="http://localhost:3000/Students";
+        let res=await axios.post(api,input)
+        console.log(res)
+        alert("Saved!")
 
+    }
+    return(
+        <>
 
+        <div style={{display:"flex",flexDirection:"column",padding:"50px"}}>
+            Enter Name: <input type="text" onChange={handleInput} name="name"/>  <br />
+            Enter City: <input type="text" onChange={handleInput} name="city"/> <br />
+            Enter Fees: <input type="text" onChange={handleInput} name="fees"/> <br />
+            Enter Roll: <input type="text" onChange={handleInput} name="roll"/> <br />
+            <button onClick={handleSubmit}>Save!</button>
+        </div>
 
+        </>
+    )
 
- 
+}
+ export default App;
 
 
 
 
       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

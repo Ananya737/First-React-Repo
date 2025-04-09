@@ -1,0 +1,39 @@
+{
+  "Students": [
+    {
+      "id": "100",
+      "name": "Ananya",
+      "city": "Sagar",
+      "fees": "30000",
+      "roll": "21"
+    },
+    {
+      "id": "9152",
+      "name": "Ananya",
+      "city": "Bhoapl",
+      "fees": "30000",
+      "roll": "21"
+    },
+    {
+      "id": "2798",
+      "name": "Ananya",
+      "city": "Bhoapl",
+      "fees": "30000",
+      "roll": "21"
+    },
+    {
+      "id": "7438",
+      "name": "Ananya",
+      "city": "Bhoapl",
+      "fees": "30000",
+      "roll": "21"
+    },
+    {
+      "id": "0888",
+      "name": "Ananya Sahu",
+      "city": "bhopal",
+      "fees": "78347758",
+      "roll": "g"
+    }
+  ]
+}
