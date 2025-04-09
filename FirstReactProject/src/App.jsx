@@ -377,12 +377,15 @@ console.log(input)
     return(
         <>
 
-        <div style={{display:"flex",flexDirection:"column",padding:"50px"}}>
+        <div style={{display:"flex",justifyContent:"center",alignItems:"center",height:"100vh"
+        }}>
+        <div style={{display:"flex",flexDirection:"column",padding:"50px",width:"600px",border:"2px solid black",borderRadius:"5px",height:"450px"}}>
             Enter Name: <input type="text" onChange={handleInput} name="name"/>  <br />
             Enter City: <input type="text" onChange={handleInput} name="city"/> <br />
             Enter Fees: <input type="text" onChange={handleInput} name="fees"/> <br />
             Enter Roll: <input type="text" onChange={handleInput} name="roll"/> <br />
             <button onClick={handleSubmit}>Save!</button>
+        </div>
         </div>
 
         </>
