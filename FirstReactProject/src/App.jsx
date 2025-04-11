@@ -354,51 +354,82 @@
 
 
 
-import {useState } from "react";
-import axios from "axios";
+// import {useState } from "react";
+// import axios from "axios";
 
-const App=()=>{
-    const [input,setInput]=useState({});
-    const handleInput=(e)=>{
-let name=e.target.name;
-let value=e.target.value;
-setInput(values=>({...values,[name]:value}))
-console.log(input)
+// const App=()=>{
+//     const [input,setInput]=useState({});
+//     const handleInput=(e)=>{
+// let name=e.target.name;
+// let value=e.target.value;
+// setInput(values=>({...values,[name]:value}))
+// console.log(input)
+//      }
+//     const handleSubmit=async()=>{
+//         let api="http://localhost:3000/Students";
+//         let res=await axios.post(api,input)
+//         console.log(res)
+//         alert("Saved!")
 
-    }
+//      } 
+//      return(
+//         <>
+//         <div 
+//         style={{display:"flex",
+//         justifyContent:"center",
+//         alignItems:"center",
+//         height:"100vh"
+//         }}>
 
-    const handleSubmit=async()=>{
-        let api="http://localhost:3000/Students";
-        let res=await axios.post(api,input)
-        console.log(res)
-        alert("Saved!")
+//         <div style={{display:"flex",flexDirection:"column",padding:"50px",width:"400px",border:"3px solid black",borderRadius:"5px",height:"450px",backgroundColor:"bisque"}}>
+//             Enter Name: <input type="text" onChange={handleInput} name="name" style={{border:"2px solid black"}}/>  <br />
+//             Enter City: <input type="text" onChange={handleInput} name="city" style={{border:"2px solid black"}}/> <br />
+//             Enter Fees: <input type="text" onChange={handleInput} name="fees" style={{border:"2px solid black"}}/> <br />
+//             Enter Roll: <input type="text" onChange={handleInput} name="roll" style={{border:"2px solid black"}}/> <br />
+//             <button onClick={handleSubmit} style={{backgroundColor:"black",color:"white"}}>Save!</button>
+//         </div>
 
-    }
-    return(
-        <>
+//         </div>
 
-        <div style={{display:"flex",justifyContent:"center",alignItems:"center",height:"100vh"
-        }}>
-        <div style={{display:"flex",flexDirection:"column",padding:"50px",width:"600px",border:"2px solid black",borderRadius:"5px",height:"450px"}}>
-            Enter Name: <input type="text" onChange={handleInput} name="name"/>  <br />
-            Enter City: <input type="text" onChange={handleInput} name="city"/> <br />
-            Enter Fees: <input type="text" onChange={handleInput} name="fees"/> <br />
-            Enter Roll: <input type="text" onChange={handleInput} name="roll"/> <br />
-            <button onClick={handleSubmit}>Save!</button>
-        </div>
-        </div>
-
-        </>
-    )
-
-}
- export default App;
+//         </>
+//     )
+// }
+// export default App;
 
 
 
 
       
 
+
+
+
+import { BrowserRouter,Routes,Route, } from "react-router-dom";
+import Layout from "./Layout";
+import Home from "./Home";
+import Insert from "./insert";
+import Display from "./display";
+
+const App=()=>{
+    return(
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Layout/>}>
+                    <Route index element={<Home/>}/>
+                    <Route path="home" element={<Home/>}/>
+                    <Route path="insert" element={<Insert/>}/>
+                    <Route path="display" element={<Display/>}/>
+
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+             
+
+        </>
+    )
+}
+export default App;
 
 
 
